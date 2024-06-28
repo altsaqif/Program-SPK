@@ -12,7 +12,7 @@ class Alternatif extends Model
 
     public function subKriteria()
     {
-        return $this->hasMany(SubKriteria::class);
+        return $this->belongsTo(SubKriteria::class, 'subkriteria_id');
     }
 
     public function kriterias()
